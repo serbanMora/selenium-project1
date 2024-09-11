@@ -11,7 +11,7 @@ public class SeleniumProject1 extends BaseTest{
 	public static void main(String[] args) throws InterruptedException {
 
 		BaseTest.setUP();
-
+ 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		//click on Login button without completing fields and assert that error message is displayed
@@ -23,6 +23,10 @@ public class SeleniumProject1 extends BaseTest{
 		wait.until(ExpectedConditions.visibilityOf(PageObject.loginError()));
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Password is required");
 		
+		PageObject.credentials("password").sendKeys("invalidPass");
+		PageObject.loginButton().click();
+		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Username and password do not match any user in this service");
+		PageObject.credentials("password").clear();
 		PageObject.credentials("password").sendKeys("secret_sauce");
 		PageObject.loginButton().click();
 
