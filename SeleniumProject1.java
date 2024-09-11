@@ -18,8 +18,11 @@ public class SeleniumProject1 extends BaseTest{
 		PageObject.loginButton().click();
 		wait.until(ExpectedConditions.visibilityOf(PageObject.loginError()));
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Username is required");
-
 		PageObject.credentials("user-name").sendKeys("standard_user");
+		PageObject.loginButton().click();
+		wait.until(ExpectedConditions.visibilityOf(PageObject.loginError()));
+		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Password is required");
+		
 		PageObject.credentials("password").sendKeys("secret_sauce");
 		PageObject.loginButton().click();
 
