@@ -30,7 +30,7 @@ public class SeleniumProject1 extends BaseTest{
 		//set the price order from low-high or high-low and assert that products are ordered correctly
 		PageObject.priceOrderValidator("hilo");
 		
-		//validate that add to cart is diplay on buttons
+		//validate that add to cart is diplayed on buttons
 		PageObject.buttonTextValidation("addToCart");
 		
 		//click on add to cart button for items based on String[] itemNames() method
