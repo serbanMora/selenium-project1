@@ -1,0 +1,74 @@
+package MySeleniumProjects;
+
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+public class SeleniumProject1 extends BaseTest{
+
+	public static void main(String[] args) throws InterruptedException {
+
+		BaseTest.setUP();
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		//click on Login button without completing fields and assert that error message is displayed
+		PageObject.loginButton().click();
+		wait.until(ExpectedConditions.visibilityOf(PageObject.loginError()));
+		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Username is required");
+
+		PageObject.credentials("user-name").sendKeys("standard_user");
+		PageObject.credentials("password").sendKeys("secret_sauce");
+		PageObject.loginButton().click();
+
+		//after login with valid credentials, get page title and assert that link count is equal to 20
+		Assert.assertEquals(driver.getTitle(), "Swag Labs");
+		Assert.assertEquals(driver.findElements(By.tagName("a")).size(), 20);
+
+		//set the price order from low-high or high-low and assert that products are ordered correctly
+		PageObject.priceOrderValidator("hilo");
+		
+		//validate that add to cart is diplay on buttons
+		PageObject.buttonTextValidation("addToCart");
+		
+		//click on add to cart button for items based on String[] itemNames() method
+		PageObject.addItems(driver, PageObject.itemNames());
+		
+		//validate that remove is displayed on buttons
+		PageObject.buttonTextValidation("remove");
+
+		//asserting that the cart number is displaying the correct number of items are added to cart
+		PageObject.cartIconNumberAssertion();
+		
+		PageObject.cart().click();
+		
+		PageObject.checkout().click();
+
+		//click on Continue button without completing fields and assert that error message is displayed
+		PageObject.continueBtn().click();
+		Assert.assertEquals(PageObject.loginError().getText(), "Error: First Name is required");
+		PageObject.credentials("first-name").sendKeys("test1");
+		PageObject.continueBtn().click();
+		Assert.assertEquals(PageObject.loginError().getText(), "Error: Last Name is required");
+		PageObject.credentials("last-name").sendKeys("test2");
+		PageObject.continueBtn().click();
+		Assert.assertEquals(PageObject.loginError().getText(), "Error: Postal Code is required");
+		PageObject.credentials("postal-code").sendKeys("1234");
+		PageObject.continueBtn().click();
+
+		//validate that all products appear at checkout
+		PageObject.checkoutProductsValidation();
+		
+		//vaidate that products total price is correct at checkout
+		PageObject.checkoutPriceValidation();
+		
+		//click finish button and validate that the send order message is displayed
+		PageObject.finishBtn().click();
+		Assert.assertEquals(PageObject.completeHeader().getText(), "Thank you for your order!");
+		Assert.assertEquals(PageObject.completeText().getText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+		
+		BaseTest.tearDown();
+	}
+}
