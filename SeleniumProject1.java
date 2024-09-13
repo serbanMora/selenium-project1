@@ -49,11 +49,14 @@ public class SeleniumProject1 extends BaseTest{
 		//asserting that the cart number is displaying the correct number of items are added to cart
 		PageObject.cartIconNumberAssertion();
 		
+		//opening social links from footer and iterates through them, closing tabs except main tab
+		PageObject.closeAllTabsExceptMain();
+		
 		PageObject.cart().click();
 		
 		PageObject.checkout().click();
 
-		//click on Continue button without completing fields and assert that error message is displayed
+		//click on Continue button without completing any field and assert that error message is displayed
 		PageObject.continueBtn().click();
 		Assert.assertEquals(PageObject.loginError().getText(), "Error: First Name is required");
 		PageObject.credentials("first-name").sendKeys("test1");
@@ -68,7 +71,7 @@ public class SeleniumProject1 extends BaseTest{
 		//validate that all products appear at checkout
 		PageObject.checkoutProductsValidation();
 		
-		//vaidate that products total price is correct at checkout
+		//validate that products total price is correct at checkout
 		PageObject.checkoutPriceValidation();
 		
 		//click finish button and validate that the send order message is displayed

@@ -1,7 +1,9 @@
 package MySeleniumProjects;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -164,6 +166,25 @@ public class PageObject extends BaseTest{
 		}
 	}
 	
+	public static void closeAllTabsExceptMain() {
+		List<WebElement> socialLinks = driver.findElements(By.xpath("//a[@rel='noreferrer']"));
+		for (int i = 0; i < socialLinks.size(); i++) {
+			socialLinks.get(i).click();
+		}
+		String mainTab = driver.getWindowHandle();
+
+		Set<String> ab = driver.getWindowHandles();
+		Iterator<String> it = ab.iterator();
+
+		while (it.hasNext()) {
+			driver.switchTo().window(it.next());
+		}
+		if (!driver.getWindowHandle().equals(mainTab)) {
+			driver.close();
+		}
+		driver.switchTo().window(mainTab);
+	}
+	
 	public static void checkoutProductsValidation() {
 		List<WebElement> products = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
 		List<String> expectedProducts = Arrays.asList(itemNames());
@@ -173,7 +194,7 @@ public class PageObject extends BaseTest{
 			String expectedName = expectedProducts.get(i);
 			
 			Assert.assertEquals(productName, expectedName);
-		}
+		} 
 	}
 	
 	public static void checkoutPriceValidation() {
