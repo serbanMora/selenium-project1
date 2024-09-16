@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -96,7 +95,7 @@ public class PageObject extends BaseTest{
 		}
 	}
 
-	public static void addItems(WebDriver driver, String[] itemNames) {
+	public static void addItems(String[] itemNames) {
 	    List<String> itemsList = Arrays.asList(itemNames);
 	    List<WebElement> products = driver.findElements(By.xpath("//div[@data-test='inventory-item-name']"));
 	    List<WebElement> addToCartButtons = driver.findElements(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory ']"));

@@ -41,7 +41,7 @@ public class SeleniumProject1 extends BaseTest{
 		PageObject.buttonTextValidation("addToCart");
 		
 		//click on add to cart button for items based on String[] itemNames() method
-		PageObject.addItems(driver, PageObject.itemNames());
+		PageObject.addItems(PageObject.itemNames());
 		
 		//validate that remove is displayed on buttons
 		PageObject.buttonTextValidation("remove");
