@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -58,6 +59,12 @@ public class PageObject extends BaseTest{
 	
 	public static WebElement completeText() {
 		return driver.findElement(By.xpath("//div[@class='complete-text']"));
+	}
+	
+	public static String jsExecutorGetText(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String text = (String) js.executeScript("return arguments[0].value;", element);
+		return text;
 	}
 
 	public static void priceOrderValidator(String value) {

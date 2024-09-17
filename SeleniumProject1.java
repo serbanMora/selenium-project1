@@ -28,6 +28,10 @@ public class SeleniumProject1 extends BaseTest{
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Username and password do not match any user in this service");
 		PageObject.credentials("password").clear();
 		PageObject.credentials("password").sendKeys("secret_sauce");
+		
+		//assert using JavascriptExecutor that Login text is correct
+		Assert.assertEquals(PageObject.jsExecutorGetText(PageObject.loginButton()), "Login");
+		
 		PageObject.loginButton().click();
 
 		//after login with valid credentials, get page title and assert that link count is equal to 20
