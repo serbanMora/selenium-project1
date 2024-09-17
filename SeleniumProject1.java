@@ -79,6 +79,7 @@ public class SeleniumProject1 extends BaseTest{
 		PageObject.checkoutPriceValidation();
 		
 		//click finish button and validate that the send order message is displayed
+		PageObject.scrollBy("1200");
 		PageObject.finishBtn().click();
 		Assert.assertEquals(PageObject.completeHeader().getText(), "Thank you for your order!");
 		Assert.assertEquals(PageObject.completeText().getText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
