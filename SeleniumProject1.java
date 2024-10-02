@@ -18,16 +18,16 @@ public class SeleniumProject1 extends BaseTest{
 		PageObject.loginButton().click();
 		wait.until(ExpectedConditions.visibilityOf(PageObject.loginError()));
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Username is required");
-		PageObject.credentials("user-name").sendKeys("standard_user");
+		PageObject.credentials(0).sendKeys("standard_user");
 		PageObject.loginButton().click();
 		wait.until(ExpectedConditions.visibilityOf(PageObject.loginError()));
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Password is required");
 		
-		PageObject.credentials("password").sendKeys("invalidPass");
+		PageObject.credentials(1).sendKeys("invalidPass");
 		PageObject.loginButton().click();
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Username and password do not match any user in this service");
-		PageObject.credentials("password").clear();
-		PageObject.credentials("password").sendKeys("secret_sauce");
+		PageObject.credentials(1).clear();
+		PageObject.credentials(1).sendKeys("secret_sauce");
 		
 		//assert using JavascriptExecutor that Login text is correct
 		Assert.assertEquals(PageObject.jsExecutorGetText(PageObject.loginButton()), "Login");
@@ -63,13 +63,13 @@ public class SeleniumProject1 extends BaseTest{
 		//click on Continue button without completing any field and assert that error message is displayed
 		PageObject.continueBtn().click();
 		Assert.assertEquals(PageObject.loginError().getText(), "Error: First Name is required");
-		PageObject.credentials("first-name").sendKeys("test1");
+		PageObject.credentials(0).sendKeys("test1");
 		PageObject.continueBtn().click();
 		Assert.assertEquals(PageObject.loginError().getText(), "Error: Last Name is required");
-		PageObject.credentials("last-name").sendKeys("test2");
+		PageObject.credentials(1).sendKeys("test2");
 		PageObject.continueBtn().click();
 		Assert.assertEquals(PageObject.loginError().getText(), "Error: Postal Code is required");
-		PageObject.credentials("postal-code").sendKeys("1234");
+		PageObject.credentials(2).sendKeys("1234");
 		PageObject.continueBtn().click();
 
 		//validate that all products appear at checkout

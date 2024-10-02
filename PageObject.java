@@ -29,8 +29,9 @@ public class PageObject extends BaseTest{
 		return driver.findElement(By.cssSelector("h3[data-test='error']"));
 	}
 
-	public static WebElement credentials(String type) {
-		return driver.findElement(By.id(type));
+	public static WebElement credentials(int index) {
+		List<WebElement> inputs = driver.findElements(By.xpath("//input[@class='input_error form_input error']"));
+		return inputs.get(index);
 	}
 
 	public static WebElement cart() {
