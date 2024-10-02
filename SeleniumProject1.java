@@ -39,7 +39,10 @@ public class SeleniumProject1 extends BaseTest{
 		Assert.assertEquals(driver.findElements(By.tagName("a")).size(), 20);
 
 		//set the price order from low-high or high-low and assert that products are ordered correctly
-		PageObject.priceOrderValidator("hilo");
+		PageObject.priceOrderValidation("hilo");
+		
+		//set the name order from A-Z or Z-A and assert that products are ordered correctly
+		PageObject.nameOrderValidation("za");
 		
 		//validate that add to cart is diplayed on buttons
 		PageObject.buttonTextValidation("addToCart");

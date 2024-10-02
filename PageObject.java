@@ -1,6 +1,8 @@
 package MySeleniumProjects;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -72,9 +74,38 @@ public class PageObject extends BaseTest{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, " + value + ");");
 	}
+	
+	public static void nameOrderValidation(String value) {
+		// string value: "az", "za"
+		Select s = new Select(productSort());
+		s.selectByValue(value);
 
-	public static void priceOrderValidator(String value) {
-		// string value: "az", "za", "lohi", "hilo"
+		List<WebElement> titles = driver.findElements(By.cssSelector("div[data-test='inventory-item-name']"));
+
+		List<String> titleTexts = new ArrayList<>();
+		for (int i = 0; i < titles.size(); i++) {
+			titleTexts.add(titles.get(i).getText());
+		}
+
+		List<String> copiedTexts = new ArrayList<>();
+		for (int i = 0; i < titleTexts.size(); i++) {
+			copiedTexts.add(titleTexts.get(i));
+		}
+
+		if (value.equals("az")) {
+			Collections.sort(copiedTexts);
+		}
+
+		if (value.equals("za")) {
+			Collections.sort(copiedTexts);
+			Collections.reverse(copiedTexts);
+		}
+
+		Assert.assertTrue(titleTexts.equals(copiedTexts));
+	}
+
+	public static void priceOrderValidation(String value) {
+		// string value: "lohi", "hilo"
 		Select s = new Select(productSort());
 		s.selectByValue(value);
 
@@ -136,46 +167,30 @@ public class PageObject extends BaseTest{
 	}
 	
 	public static void buttonTextValidation(String type) {
-		List<WebElement> addToCart = driver.findElements(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory ']"));
-		List<WebElement> remove = driver.findElements(By.xpath("//button[@class='btn btn_secondary btn_small btn_inventory ']"));
+		List<WebElement> addToCart = driver
+				.findElements(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory ']"));
+
+		List<String> btn = new ArrayList<>();
+		for (WebElement element : addToCart) {
+			btn.add(element.getText());
+		}
+
+		List<String> expected = new ArrayList<>();
 		
 		if (type.equals("addToCart")) {
-			String[] array = new String[addToCart.size()];
+			for (int i = 0; i < btn.size(); i++) {
 
-			for (int i = 0; i < addToCart.size(); i++) {
-				array[i] = addToCart.get(i).getText();
+				expected.add("Add to cart");
 			}
 
-			String[] expectedText = new String[addToCart.size()];
-			for (int i = 0; i < expectedText.length; i++) {
-				expectedText[i] = "Add to cart";
-			}
+			if (type.equals("remove")) {
+				for (int i = 0; i < itemNames().length; i++) {
 
-			Assert.assertEquals(array.length, expectedText.length);
-
-			for (int i = 0; i < array.length; i++) {
-				Assert.assertEquals(array[i], expectedText[i]);
+					expected.add("Remove");
+				}
 			}
 		}
-		
-		if (type.equals("remove")) {
-			String[] array = new String[remove.size()];
-			
-			for (int i = 0; i < remove.size(); i++) {
-				array[i] = remove.get(i).getText();
-			}
-			
-			String[] expectedText = new String[remove.size()];
-			for (int i = 0; i < expectedText.length; i++) {
-				expectedText[i] = "Remove";
-			}
-			
-			Assert.assertEquals(array.length, expectedText.length);
-			
-			for (int i = 0; i < array.length; i++) {
-				Assert.assertEquals(array[i], expectedText[i]);
-			}
-		}
+		Assert.assertTrue(btn.equals(expected));
 	}
 	
 	public static void closeAllTabsExceptMain() {
@@ -198,15 +213,19 @@ public class PageObject extends BaseTest{
 	}
 	
 	public static void checkoutProductsValidation() {
-		List<WebElement> products = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
+		List<WebElement> productsList = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
 		List<String> expectedProducts = Arrays.asList(itemNames());
 		
-		for (int i = 0; i < products.size(); i++) {
-			String productName = products.get(i).getText();
-			String expectedName = expectedProducts.get(i);
-			
-			Assert.assertEquals(productName, expectedName);
+		List<String> products = new ArrayList<>();
+		for (int i = 0; i < productsList.size(); i++) {
+			products.add(productsList.get(i).getText());
 		} 
+		
+		Collections.sort(products);
+		Collections.sort(expectedProducts);
+		
+		Assert.assertTrue(products.equals(expectedProducts));
+		
 	}
 	
 	public static void checkoutPriceValidation() {
