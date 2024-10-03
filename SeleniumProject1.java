@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class SeleniumProject1 extends BaseTest{
+public class SeleniumProject1 extends BaseTest {
 
 	public static void main(String[] args) throws InterruptedException {
 

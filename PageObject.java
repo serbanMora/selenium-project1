@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class PageObject extends BaseTest{
+public class PageObject extends BaseTest {
 	
 	public static String[] itemNames() {
 		
@@ -113,32 +113,26 @@ public class PageObject extends BaseTest{
 
 		List<WebElement> prices = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
 
-		int[] intArray = new int[prices.size()];
-
+		List<Double> pricesDouble = new ArrayList<>();
 		for (int i = 0; i < prices.size(); i++) {
-
-			String text = prices.get(i).getText().replace("$", "");
-			double num = Double.parseDouble(text);
-			int priceAsInt = (int) (num * 100);
-
-			intArray[i] = priceAsInt;
+			Double val = Double.parseDouble(prices.get(i).getText().replaceAll("[^\\d.]", ""));
+			pricesDouble.add(val);
 		}
 
-		if (value.equals("lohi")) {
-			for (int i = 0; i < intArray.length - 1; i++) {
-				if (intArray[i] < intArray[i + 1]) {
-					Assert.assertTrue(true);
-				}
-			}
+		List<Double> copiedPrices = new ArrayList<>();
+		for (int i = 0; i < pricesDouble.size(); i++) {
+			copiedPrices.add(pricesDouble.get(i));
 		}
 		
-		if (value.equals("hilo")) {
-			for (int i = 0; i < intArray.length - 1; i++) {
-				if (intArray[i] > intArray[i + 1]) {
-					Assert.assertTrue(true);
-				}
-			}
+		if (value.equalsIgnoreCase("lohi")) {
+			Collections.sort(copiedPrices);
 		}
+		if (value.equalsIgnoreCase("hilo")) {
+			Collections.sort(copiedPrices);
+			Collections.reverse(copiedPrices);
+		}
+		
+		Assert.assertTrue(pricesDouble.equals(copiedPrices));
 	}
 
 	public static void addItems(String[] itemNames) {
