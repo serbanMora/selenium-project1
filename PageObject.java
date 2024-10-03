@@ -81,9 +81,8 @@ public class PageObject extends BaseTest {
 		// string value: "az", "za"
 		Select s = new Select(productSort());
 		s.selectByValue(value);
-
+		
 		List<WebElement> titles = driver.findElements(By.cssSelector("div[data-test='inventory-item-name']"));
-
 		List<String> titleTexts = new ArrayList<>();
 		for (int i = 0; i < titles.size(); i++) {
 			titleTexts.add(titles.get(i).getText());
@@ -94,28 +93,29 @@ public class PageObject extends BaseTest {
 			copiedTexts.add(titleTexts.get(i));
 		}
 
-		if (value.equals("az")) {
+		switch (value.toLowerCase()) {
+		case "az":
 			Collections.sort(copiedTexts);
+			break;
+		case "za":
+			Collections.sort(copiedTexts, Collections.reverseOrder());
+			break;
+		default:
+			throw new IllegalArgumentException("Invalid sorting order: " + value);
 		}
-
-		if (value.equals("za")) {
-			Collections.sort(copiedTexts);
-			Collections.reverse(copiedTexts);
-		}
-
-		Assert.assertTrue(titleTexts.equals(copiedTexts));
+		
+		Assert.assertTrue(titleTexts.equals(copiedTexts), "TC8 FAILED: Products are not sorted in " + value + " order.");
 	}
 
 	public static void priceOrderValidation(String value) {
 		// string value: "lohi", "hilo"
 		Select s = new Select(productSort());
 		s.selectByValue(value);
-
-		List<WebElement> prices = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
+		List<WebElement> pricesList = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
 
 		List<Double> pricesDouble = new ArrayList<>();
-		for (int i = 0; i < prices.size(); i++) {
-			Double val = Double.parseDouble(prices.get(i).getText().replaceAll("[^\\d.]", ""));
+		for (int i = 0; i < pricesList.size(); i++) {
+			Double val = Double.parseDouble(pricesList.get(i).getText().replaceAll("[^\\d.]", ""));
 			pricesDouble.add(val);
 		}
 
@@ -124,26 +124,29 @@ public class PageObject extends BaseTest {
 			copiedPrices.add(pricesDouble.get(i));
 		}
 		
-		if (value.equalsIgnoreCase("lohi")) {
+		switch (value.toLowerCase()) {
+		case "lohi": 
 			Collections.sort(copiedPrices);
-		}
-		if (value.equalsIgnoreCase("hilo")) {
-			Collections.sort(copiedPrices);
-			Collections.reverse(copiedPrices);
+			break;
+		case "hilo":
+			Collections.sort(copiedPrices, Collections.reverseOrder());
+			break;
+		default:
+			throw new IllegalArgumentException("Invalid sorting order: " + value);
 		}
 		
-		Assert.assertTrue(pricesDouble.equals(copiedPrices));
+		Assert.assertTrue(pricesDouble.equals(copiedPrices), "TC7 FAILED: Products are not sorted in " + value + " order.");
 	}
 
 	public static void addItems(String[] itemNames) {
 	    List<String> itemsList = Arrays.asList(itemNames);
-	    List<WebElement> products = driver.findElements(By.xpath("//div[@data-test='inventory-item-name']"));
 	    List<WebElement> addToCartButtons = driver.findElements(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory ']"));
-
+	    List<WebElement> titles = driver.findElements(By.cssSelector("div[data-test='inventory-item-name']"));
+	    
 	    int j = 0;
 
-	    for (int i = 0; i < products.size(); i++) {
-	        String name = products.get(i).getText();
+	    for (int i = 0; i < titles.size(); i++) {
+	        String name = titles.get(i).getText();
 	        
 	        if (itemsList.contains(name)) {
 	            addToCartButtons.get(i).click();
@@ -159,7 +162,7 @@ public class PageObject extends BaseTest {
 	public static void cartIconNumberAssertion() {
 		String cartText = cart().getText();
 		int cartNumber = Integer.parseInt(cartText);
-		Assert.assertEquals(cartNumber, itemNames().length);
+		Assert.assertEquals(cartNumber, itemNames().length, "TC11 FAILED: Cart does not display the correct number.");
 	}
 	
 	public static void buttonTextValidation(String type) {
@@ -185,7 +188,7 @@ public class PageObject extends BaseTest {
 				}
 			}
 		}
-		Assert.assertTrue(btn.containsAll(expected));
+		Assert.assertTrue(btn.containsAll(expected), "TC10 FAILED: '" + type + "' button is not displaying.");
 	}
 	
 	public static void closeAllTabsExceptMain() {
@@ -219,11 +222,12 @@ public class PageObject extends BaseTest {
 		Collections.sort(products);
 		Collections.sort(expectedProducts);
 		
-		Assert.assertTrue(products.equals(expectedProducts));
+		Assert.assertTrue(products.equals(expectedProducts), "TC14 FAILED: " + expectedProducts + " not displayed at checkout.");
 		
 	}
 	
 	public static void checkoutPriceValidation() {
+		List<WebElement> pricesList = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
 		String subtotal = driver.findElement(By.xpath("//div[@class='summary_subtotal_label']")).getText().replaceAll("[^\\d.]", "");
 		String tax = driver.findElement(By.xpath("//div[@class='summary_tax_label']")).getText().replaceAll("[^\\d.]", "");
 		String total = driver.findElement(By.xpath("//div[@class='summary_total_label']")).getText().replaceAll("[^\\d.]", "");
@@ -233,14 +237,14 @@ public class PageObject extends BaseTest {
 		double totalD = Double.parseDouble(total);
 		
 		double sum = 0;
-		List<WebElement> priceList = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
-		for (int i = 0; i < priceList.size(); i++) {
-			String price = priceList.get(i).getText().replaceAll("[^\\d.]", "");
+		
+		for (int i = 0; i < pricesList.size(); i++) {
+			String price = pricesList.get(i).getText().replaceAll("[^\\d.]", "");
 		    double priceValue = Double.parseDouble(price);
 		    sum += priceValue;
 			}
 		
-		Assert.assertEquals(sum, subtotalD, 0.01);
-		Assert.assertEquals(totalD, subtotalD + taxD, 0.01);
+		Assert.assertEquals(sum, subtotalD, 0.01, "TC 15 FAILED: Item total is not displaying correct value.");
+		Assert.assertEquals(totalD, subtotalD + taxD, 0.01, "TC 15 FAILED: Total price is not displaying correct value.");
 	}
 }
