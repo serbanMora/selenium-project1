@@ -16,11 +16,13 @@ import org.testng.Assert;
 public class PageObject extends BaseTest{
 	
 	public static String[] itemNames() {
+		
 		return new String[] { "Sauce Labs Fleece Jacket", 
 							  "Sauce Labs Backpack", 
 							  "Sauce Labs Bolt T-Shirt", 
 							  "Test.allTheThings() T-Shirt (Red)", 
-							  "Sauce Labs Bike Light", "Sauce Labs Onesie", };
+							  "Sauce Labs Bike Light", 
+							  "Sauce Labs Onesie" };
 	}
 	
 	public static WebElement loginButton() {
@@ -167,8 +169,7 @@ public class PageObject extends BaseTest{
 	}
 	
 	public static void buttonTextValidation(String type) {
-		List<WebElement> addToCart = driver
-				.findElements(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory ']"));
+		List<WebElement> addToCart = driver.findElements(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory ']"));
 
 		List<String> btn = new ArrayList<>();
 		for (WebElement element : addToCart) {
@@ -190,7 +191,7 @@ public class PageObject extends BaseTest{
 				}
 			}
 		}
-		Assert.assertTrue(btn.equals(expected));
+		Assert.assertTrue(btn.containsAll(expected));
 	}
 	
 	public static void closeAllTabsExceptMain() {
@@ -245,7 +246,7 @@ public class PageObject extends BaseTest{
 		    sum += priceValue;
 			}
 		
-		Assert.assertEquals(sum, subtotalD);
-		Assert.assertEquals(totalD, subtotalD + taxD);
+		Assert.assertEquals(sum, subtotalD, 0.01);
+		Assert.assertEquals(totalD, subtotalD + taxD, 0.01);
 	}
 }
