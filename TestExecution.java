@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SeleniumProject1 extends BaseTest {
+public class TestExecution extends BaseTest {
 	
 	static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	
