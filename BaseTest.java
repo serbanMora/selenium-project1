@@ -4,14 +4,14 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
 	
 	static WebDriver driver;
 
-	@BeforeMethod
+	@BeforeClass 
 	public static void setUP() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Lynx User\\Desktop\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -21,7 +21,7 @@ public class BaseTest {
 		driver.get("https://www.saucedemo.com/");
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public static void tearDown() {
 		if (driver != null) {
 			driver.quit();

@@ -5,65 +5,88 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class SeleniumProject1 extends BaseTest {
-
-	public static void main(String[] args) throws InterruptedException {
-
-		BaseTest.setUP();
- 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		//click on Login button without completing fields and assert that error message is displayed
+	
+	static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	
+	@Test
+	public void TC1() {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		PageObject.loginButton().click();
 		wait.until(ExpectedConditions.visibilityOf(PageObject.loginError()));
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Username is required");
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC1")
+	public void TC2() {
 		PageObject.credentials(0).sendKeys("standard_user");
 		PageObject.loginButton().click();
 		wait.until(ExpectedConditions.visibilityOf(PageObject.loginError()));
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Password is required");
-		
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC2")
+	public void TC3() {
 		PageObject.credentials(1).sendKeys("invalidPass");
 		PageObject.loginButton().click();
 		Assert.assertEquals(PageObject.loginError().getText(), "Epic sadface: Username and password do not match any user in this service");
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC3")
+	public void TC4() {
 		PageObject.credentials(1).clear();
 		PageObject.credentials(1).sendKeys("secret_sauce");
-		
-		//assert using JavascriptExecutor that Login text is correct
 		Assert.assertEquals(PageObject.jsExecutorGetText(PageObject.loginButton()), "Login");
-		
 		PageObject.loginButton().click();
-
-		//after login with valid credentials, get page title and assert that link count is equal to 20
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC4")
+	public void TC5() {
 		Assert.assertEquals(driver.getTitle(), "Swag Labs");
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC5")
+	public void TC6() {
 		Assert.assertEquals(driver.findElements(By.tagName("a")).size(), 20);
-
-		//set the price order from low-high or high-low and assert that products are ordered correctly
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC6")
+	public void TC7() {
 		PageObject.priceOrderValidation("hilo");
-		
-		//set the name order from A-Z or Z-A and assert that products are ordered correctly
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC7")
+	public void TC8() {
 		PageObject.nameOrderValidation("za");
-		
-		//validate that add to cart is diplayed on buttons
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC8")
+	public void TC9() {
 		PageObject.buttonTextValidation("addToCart");
-		
-		//click on add to cart button for items based on String[] itemNames() method
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC9")
+	public void TC10() {
 		PageObject.addItems(PageObject.itemNames());
-		
-		//validate that remove is displayed on buttons
 		PageObject.buttonTextValidation("remove");
-
-		//asserting that the cart number is displaying the correct number of items are added to cart
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC10")
+	public void TC11() {
 		PageObject.cartIconNumberAssertion();
-		
-		//opening social links from footer and iterates through them, closing tabs except main tab
+	}
+	
+	@Test  (alwaysRun = true, dependsOnMethods = "TC11")
+	public void TC12() {
 		PageObject.closeAllTabsExceptMain();
-		
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC12")
+	public void TC13() {
 		PageObject.cart().click();
-		
 		PageObject.checkout().click();
-
-		//click on Continue button without completing any field and assert that error message is displayed
 		PageObject.continueBtn().click();
 		Assert.assertEquals(PageObject.loginError().getText(), "Error: First Name is required");
 		PageObject.credentials(0).sendKeys("test1");
@@ -74,19 +97,23 @@ public class SeleniumProject1 extends BaseTest {
 		Assert.assertEquals(PageObject.loginError().getText(), "Error: Postal Code is required");
 		PageObject.credentials(2).sendKeys("1234");
 		PageObject.continueBtn().click();
-
-		//validate that all products appear at checkout
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC13")
+	public void TC14() {
 		PageObject.checkoutProductsValidation();
-		
-		//validate that products total price is correct at checkout
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC14")
+	public void TC15() {
 		PageObject.checkoutPriceValidation();
-		
-		//click finish button and validate that the send order message is displayed
+	}
+	
+	@Test (alwaysRun = true, dependsOnMethods = "TC15")
+	public void TC16() {
 		PageObject.scrollBy("1200");
 		PageObject.finishBtn().click();
 		Assert.assertEquals(PageObject.completeHeader().getText(), "Thank you for your order!");
 		Assert.assertEquals(PageObject.completeText().getText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
-		
-		BaseTest.tearDown();
 	}
 }
