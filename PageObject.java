@@ -78,7 +78,6 @@ public class PageObject extends BaseTest {
 	}
 	
 	public static void nameOrderValidation(String value) {
-		// string value: "az", "za"
 		Select s = new Select(productSort());
 		s.selectByValue(value);
 		
@@ -108,7 +107,6 @@ public class PageObject extends BaseTest {
 	}
 
 	public static void priceOrderValidation(String value) {
-		// string value: "lohi", "hilo"
 		Select s = new Select(productSort());
 		s.selectByValue(value);
 		List<WebElement> pricesList = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
