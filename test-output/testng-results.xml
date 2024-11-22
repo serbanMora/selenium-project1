@@ -2,80 +2,92 @@
 <testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-22T16:41:50 EET" name="Default suite" finished-at="2024-11-22T16:42:04 EET" duration-ms="13874">
+  <suite started-at="2024-11-22T17:44:22 EET" name="Default suite" finished-at="2024-11-22T17:44:36 EET" duration-ms="13653">
     <groups>
     </groups>
-    <test started-at="2024-11-22T16:41:50 EET" name="Default test" finished-at="2024-11-22T16:42:04 EET" duration-ms="13874">
+    <test started-at="2024-11-22T17:44:22 EET" name="Default test" finished-at="2024-11-22T17:44:36 EET" duration-ms="13653">
       <class name="TestCases.TestExecution">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:50 EET" name="setUP" finished-at="2024-11-22T16:41:54 EET" duration-ms="3905" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:22 EET" name="setUP" finished-at="2024-11-22T17:44:26 EET" duration-ms="3602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC1()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:54 EET" name="TC1" finished-at="2024-11-22T16:41:55 EET" duration-ms="341" status="PASS">
+        <test-method signature="TC1()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:26 EET" name="TC1" finished-at="2024-11-22T17:44:26 EET" duration-ms="386" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1 -->
-        <test-method signature="TC2()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:55 EET" name="TC2" finished-at="2024-11-22T16:41:55 EET" depends-on-methods="TestCases.TestExecution.TC1" duration-ms="327" status="PASS">
+        <test-method signature="TC2()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:26 EET" name="TC2" finished-at="2024-11-22T17:44:26 EET" depends-on-methods="TestCases.TestExecution.TC1" duration-ms="328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC2 -->
-        <test-method signature="TC3()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:55 EET" name="TC3" finished-at="2024-11-22T16:41:55 EET" depends-on-methods="TestCases.TestExecution.TC2" duration-ms="303" status="PASS">
+        <test-method signature="TC3()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:26 EET" name="TC3" finished-at="2024-11-22T17:44:27 EET" depends-on-methods="TestCases.TestExecution.TC2" duration-ms="337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC3 -->
-        <test-method signature="TC4()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:55 EET" name="TC4" finished-at="2024-11-22T16:41:55 EET" depends-on-methods="TestCases.TestExecution.TC3" duration-ms="314" status="PASS">
+        <test-method signature="TC4(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:27 EET" name="TC4" data-provider="getData" finished-at="2024-11-22T17:44:27 EET" depends-on-methods="TestCases.TestExecution.TC3" duration-ms="298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC4 -->
-        <test-method signature="TC5()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:55 EET" name="TC5" finished-at="2024-11-22T16:41:55 EET" depends-on-methods="TestCases.TestExecution.TC4" duration-ms="16" status="PASS">
+        <test-method signature="TC5()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:27 EET" name="TC5" finished-at="2024-11-22T17:44:27 EET" depends-on-methods="TestCases.TestExecution.TC4" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC5 -->
-        <test-method signature="TC6()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:55 EET" name="TC6" finished-at="2024-11-22T16:41:56 EET" depends-on-methods="TestCases.TestExecution.TC5" duration-ms="12" status="PASS">
+        <test-method signature="TC6()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:27 EET" name="TC6" finished-at="2024-11-22T17:44:27 EET" depends-on-methods="TestCases.TestExecution.TC5" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC6 -->
-        <test-method signature="TC7()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:56 EET" name="TC7" finished-at="2024-11-22T16:41:56 EET" depends-on-methods="TestCases.TestExecution.TC6" duration-ms="388" status="PASS">
+        <test-method signature="TC7()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:27 EET" name="TC7" finished-at="2024-11-22T17:44:27 EET" depends-on-methods="TestCases.TestExecution.TC6" duration-ms="405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC7 -->
-        <test-method signature="TC8()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:56 EET" name="TC8" finished-at="2024-11-22T16:41:56 EET" depends-on-methods="TestCases.TestExecution.TC7" duration-ms="371" status="PASS">
+        <test-method signature="TC8()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:27 EET" name="TC8" finished-at="2024-11-22T17:44:28 EET" depends-on-methods="TestCases.TestExecution.TC7" duration-ms="357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC8 -->
-        <test-method signature="TC9()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:56 EET" name="TC9" finished-at="2024-11-22T16:41:56 EET" depends-on-methods="TestCases.TestExecution.TC8" duration-ms="55" status="PASS">
+        <test-method signature="TC9()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:28 EET" name="TC9" finished-at="2024-11-22T17:44:28 EET" depends-on-methods="TestCases.TestExecution.TC8" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC9 -->
-        <test-method signature="TC10()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:41:56 EET" name="TC10" finished-at="2024-11-22T16:42:01 EET" depends-on-methods="TestCases.TestExecution.TC9" duration-ms="4333" status="PASS">
+        <test-method signature="TC10()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:28 EET" name="TC10" finished-at="2024-11-22T17:44:32 EET" depends-on-methods="TestCases.TestExecution.TC9" duration-ms="4425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC10 -->
-        <test-method signature="TC11()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:42:01 EET" name="TC11" finished-at="2024-11-22T16:42:01 EET" depends-on-methods="TestCases.TestExecution.TC10" duration-ms="15" status="PASS">
+        <test-method signature="TC11()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:32 EET" name="TC11" finished-at="2024-11-22T17:44:32 EET" depends-on-methods="TestCases.TestExecution.TC10" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC11 -->
-        <test-method signature="TC12()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:42:01 EET" name="TC12" finished-at="2024-11-22T16:42:01 EET" depends-on-methods="TestCases.TestExecution.TC11" duration-ms="500" status="PASS">
+        <test-method signature="TC12()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:32 EET" name="TC12" finished-at="2024-11-22T17:44:33 EET" depends-on-methods="TestCases.TestExecution.TC11" duration-ms="578" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC12 -->
-        <test-method signature="TC13()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:42:01 EET" name="TC13" finished-at="2024-11-22T16:42:02 EET" depends-on-methods="TestCases.TestExecution.TC12" duration-ms="1301" status="PASS">
+        <test-method signature="TC13()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:33 EET" name="TC13" finished-at="2024-11-22T17:44:34 EET" depends-on-methods="TestCases.TestExecution.TC12" duration-ms="1391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC13 -->
-        <test-method signature="TC14()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:42:02 EET" name="TC14" finished-at="2024-11-22T16:42:03 EET" depends-on-methods="TestCases.TestExecution.TC13" duration-ms="140" status="PASS">
+        <test-method signature="TC14()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:34 EET" name="TC14" finished-at="2024-11-22T17:44:34 EET" depends-on-methods="TestCases.TestExecution.TC13" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC14 -->
-        <test-method signature="TC15()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:42:03 EET" name="TC15" finished-at="2024-11-22T16:42:03 EET" depends-on-methods="TestCases.TestExecution.TC14" duration-ms="173" status="PASS">
+        <test-method signature="TC15()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:34 EET" name="TC15" finished-at="2024-11-22T17:44:35 EET" depends-on-methods="TestCases.TestExecution.TC14" duration-ms="133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC15 -->
-        <test-method signature="TC16()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:42:03 EET" name="TC16" finished-at="2024-11-22T16:42:03 EET" depends-on-methods="TestCases.TestExecution.TC15" duration-ms="248" status="PASS">
+        <test-method signature="TC16()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:35 EET" name="TC16" finished-at="2024-11-22T17:44:35 EET" depends-on-methods="TestCases.TestExecution.TC15" duration-ms="270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC16 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TestExecution@3ba987b8]" started-at="2024-11-22T16:42:03 EET" name="tearDown" finished-at="2024-11-22T16:42:04 EET" duration-ms="1072" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TestExecution@402c4085]" started-at="2024-11-22T17:44:35 EET" name="tearDown" finished-at="2024-11-22T17:44:36 EET" duration-ms="826" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

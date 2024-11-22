@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Project2.Config.BaseTest;
@@ -16,6 +17,9 @@ public class TestExecution extends BaseTest {
 	LoginPage login;
 	ProductCatalog productCatalog;
 	CartPage cartPage;
+	
+	String userName = "standard_user";
+	String password = "secret_sauce";
 	
 	@Test (alwaysRun = true, enabled = true)
 	public void TC1() throws IOException {
@@ -45,11 +49,11 @@ public class TestExecution extends BaseTest {
 		login.clearField("password");
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC3", enabled = true)
-	public void TC4() {
+	@Test (dataProvider = "getData", alwaysRun = true, dependsOnMethods = "TC3", enabled = true)
+	public void TC4(String userName, String password) {
 		login = new LoginPage(driver);
-		login.setName("standard_user");
-		login.setPassword("secret_sauce");
+		login.setName(userName);
+		login.setPassword(password);
 		Assert.assertEquals(jsExecutorGetText(login.loginButton()), "Login");
 		login.clickLogIn();
 	}
@@ -136,5 +140,15 @@ public class TestExecution extends BaseTest {
 		cartPage.submitOrder();
 		Assert.assertEquals(cartPage.completeHeader().getText(), "Thank you for your order!");
 		Assert.assertEquals(cartPage.completeText().getText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+	}
+	
+	@DataProvider
+	public Object[][] getData() {
+		Object[][] data = new Object[1][2];
+		
+		data[0][0] = userName;
+		data[0][1] = password;
+		
+		return data;
 	}
 }
