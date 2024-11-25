@@ -25,18 +25,22 @@ public class BaseTest {
 	public void setUP() throws IOException {
 		
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\Lynx User\\eclipse-workspace\\Selenium2\\src\\main\\java\\Project2\\Config\\data.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/Project2/Config/data.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		
+		String chromeDriverPath = prop.getProperty("chromeDriverPath");
+		String firefoxDriverPath = prop.getProperty("firefoxDriverPath");
+		String edgeDriverPath = prop.getProperty("edgeDriverPath");
+		
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Lynx User\\Desktop\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			driver = new ChromeDriver();
 		} else if (browserName.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Lynx User\\Desktop\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
 			driver = new FirefoxDriver();
 		} else if (browserName.equals("edge")) {
-			System.setProperty("webdriver.ie.driver", "C:\\Users\\Lynx User\\Desktop\\msedgedriver.exe");
+			System.setProperty("webdriver.ie.driver", edgeDriverPath);
 			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
