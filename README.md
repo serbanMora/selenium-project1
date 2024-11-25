@@ -14,7 +14,7 @@ https://docs.google.com/spreadsheets/d/1FUSAcneXHMrAfhirHQXsYZekvQnfc3wjYR6raoei
     •/SeleniumProject/src/main/java/Project2/Config
         This directory contains configuration files and base test classes needed for setting up the testing environment.
             BaseTest.java: A base test class that initializes the WebDriver and provides common test setup and teardown methods.
-            data.properties: A properties file where you can select the browser in which the test cases will run (Chrome, Firefox, Edge).
+            data.properties: A properties file where you can select the browser in which the test cases will run (Chrome, Firefox, Edge), the url and the browser driver paths.
 
     •/SeleniumProject/src/main/java/TestCases
         This directory contains the test case classes responsible for executing the test logic. Each class corresponds to specific scenarios and uses the page objects to carry out the tests.
