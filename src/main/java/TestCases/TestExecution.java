@@ -47,6 +47,7 @@ public class TestExecution extends BaseTest {
 		Assert.assertEquals(login.loginError().getText(), "Epic sadface: Username and password do not match any user in this service");
 		login.clearField("userName");
 		login.clearField("password");
+		driver.navigate().refresh();
 	}
 	
 	@Test (dataProvider = "getData", alwaysRun = true, dependsOnMethods = "TC3", enabled = true)
