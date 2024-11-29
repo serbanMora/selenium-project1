@@ -38,11 +38,14 @@
     <artifactId>extentreports</artifactId>
     <version>5.1.2</version>
 </dependency>
-   	<dependency>
-   		<groupId>GeneralStore</groupId>
-   		<artifactId>AppiumProject</artifactId>
-   		<version>0.0.1-SNAPSHOT</version>
-   	</dependency>
+
+   	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.18.0</version>
+</dependency>
+
    	<dependency>
    		<groupId>SeleniumProject</groupId>
    		<artifactId>SeleniumProject</artifactId>
