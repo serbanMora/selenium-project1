@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">16 methods, 1 failed,   15 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.TestExecution" class="method navigator-link" hash-for-method="TC16">TC16</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">16 methods,   16 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -148,6 +134,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestCases.TestExecution" class="method navigator-link" hash-for-method="TC15">TC15</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.TestExecution" class="method navigator-link" hash-for-method="TC16">TC16</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -202,26 +193,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestCases.TestExecution</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC16">
-                  </a> <!-- TC16 -->
-                  <span class="method-name">TC16</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [1Thank you for your order!] but found [Thank you for your order!]
-	at TestCases.TestExecution.TC16(TestExecution.java:142)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -275,6 +246,13 @@
                   <a name="TC15">
                   </a> <!-- TC15 -->
                   <span class="method-name">TC15</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC16">
+                  </a> <!-- TC16 -->
+                  <span class="method-name">TC16</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -395,67 +373,67 @@ data.addRows(16);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC10')
 data.setCell(0, 2, 'TestCases.TestExecution')
-data.setCell(0, 3, 3292);
+data.setCell(0, 3, 3475);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC13')
 data.setCell(1, 2, 'TestCases.TestExecution')
-data.setCell(1, 3, 532);
+data.setCell(1, 3, 521);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'TC12')
 data.setCell(2, 2, 'TestCases.TestExecution')
-data.setCell(2, 3, 479);
+data.setCell(2, 3, 444);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC3')
+data.setCell(3, 1, 'TC7')
 data.setCell(3, 2, 'TestCases.TestExecution')
-data.setCell(3, 3, 271);
+data.setCell(3, 3, 261);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC7')
+data.setCell(4, 1, 'TC3')
 data.setCell(4, 2, 'TestCases.TestExecution')
-data.setCell(4, 3, 270);
+data.setCell(4, 3, 252);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'TC8')
 data.setCell(5, 2, 'TestCases.TestExecution')
-data.setCell(5, 3, 255);
+data.setCell(5, 3, 252);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TC4')
+data.setCell(6, 1, 'TC15')
 data.setCell(6, 2, 'TestCases.TestExecution')
-data.setCell(6, 3, 253);
+data.setCell(6, 3, 217);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TC15')
+data.setCell(7, 1, 'TC4')
 data.setCell(7, 2, 'TestCases.TestExecution')
-data.setCell(7, 3, 207);
+data.setCell(7, 3, 187);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TC2')
+data.setCell(8, 1, 'TC14')
 data.setCell(8, 2, 'TestCases.TestExecution')
-data.setCell(8, 3, 169);
+data.setCell(8, 3, 159);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'TC1')
+data.setCell(9, 1, 'TC2')
 data.setCell(9, 2, 'TestCases.TestExecution')
-data.setCell(9, 3, 168);
+data.setCell(9, 3, 157);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TC14')
+data.setCell(10, 1, 'TC1')
 data.setCell(10, 2, 'TestCases.TestExecution')
-data.setCell(10, 3, 159);
+data.setCell(10, 3, 156);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'TC16')
 data.setCell(11, 2, 'TestCases.TestExecution')
-data.setCell(11, 3, 90);
+data.setCell(11, 3, 96);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'TC9')
 data.setCell(12, 2, 'TestCases.TestExecution')
 data.setCell(12, 3, 65);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'TC6')
+data.setCell(13, 1, 'TC11')
 data.setCell(13, 2, 'TestCases.TestExecution')
-data.setCell(13, 3, 28);
+data.setCell(13, 3, 32);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'TC11')
+data.setCell(14, 1, 'TC6')
 data.setCell(14, 2, 'TestCases.TestExecution')
-data.setCell(14, 3, 21);
+data.setCell(14, 3, 18);
 data.setCell(15, 0, 15)
 data.setCell(15, 1, 'TC5')
 data.setCell(15, 2, 'TestCases.TestExecution')
-data.setCell(15, 3, 16);
+data.setCell(15, 3, 11);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -493,73 +471,71 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">TC1</span>
-                <span class="method-start">1987 ms</span>
+                <span class="method-start">1621 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC2</span>
-                <span class="method-start">2160 ms</span>
+                <span class="method-start">1783 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC3</span>
-                <span class="method-start">2331 ms</span>
+                <span class="method-start">1941 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC4(standard_user, secret_sauce)</span>
-                <span class="method-start">2608 ms</span>
+                <span class="method-start">2199 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC5</span>
-                <span class="method-start">2863 ms</span>
+                <span class="method-start">2388 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC6</span>
-                <span class="method-start">2882 ms</span>
+                <span class="method-start">2400 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC7</span>
-                <span class="method-start">2911 ms</span>
+                <span class="method-start">2419 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC8</span>
-                <span class="method-start">3182 ms</span>
+                <span class="method-start">2682 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC9</span>
-                <span class="method-start">3439 ms</span>
+                <span class="method-start">2935 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC10</span>
-                <span class="method-start">3505 ms</span>
+                <span class="method-start">3002 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC11</span>
-                <span class="method-start">6800 ms</span>
+                <span class="method-start">6480 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC12</span>
-                <span class="method-start">6822 ms</span>
+                <span class="method-start">6513 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC13</span>
-                <span class="method-start">7303 ms</span>
+                <span class="method-start">6959 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC14</span>
-                <span class="method-start">7837 ms</span>
+                <span class="method-start">7482 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC15</span>
-                <span class="method-start">7997 ms</span>
+                <span class="method-start">7642 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TC16</span>
-                <span class="method-start">8205 ms</span>
+                <span class="method-start">7861 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8436 ms</span>
+                <span class="method-start">7958 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

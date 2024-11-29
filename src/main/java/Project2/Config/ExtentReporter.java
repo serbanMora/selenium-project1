@@ -10,12 +10,12 @@ public class ExtentReporter {
 	public static ExtentReports getReporterObject()	{
 	String path = System.getProperty("user.dir") + "/REPORTS/index.html";
 	ExtentSparkReporter reporter = new ExtentSparkReporter(path);
-	reporter.config().setReportName("saucedemo Automation Test Results");
-	reporter.config().setDocumentTitle("Saucedemo.com Test Report");
+	reporter.config().setReportName("Saucedemo Automation Test Results");
+	reporter.config().setDocumentTitle("Saucedemo Automation Test Report");
 	
 	extent = new ExtentReports();
 	extent.attachReporter(reporter);
-	extent.setSystemInfo("Tester", "Serban Mora");
+	extent.setSystemInfo("Automation Tester", "Serban Mora");
 	return extent;
 	}
 }
