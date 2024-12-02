@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="saucedemo.testCases.TestExecution" time="8.684" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="saucedemo.testCases.TestExecution" time="8.877" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="webdriver.chrome.driver" value="C:\Users\Lynx User\eclipse-workspace\SeleniumProject\drivers\chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\Lynx User\AppData\Local\Temp\surefire13664974799348239619\surefirebooter-20241202153942888_3.jar C:\Users\Lynx User\AppData\Local\Temp\surefire13664974799348239619 2024-12-02T15-39-42_741-jvmRun1 surefire-20241202153942888_1tmp surefire_0-20241202153942888_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Lynx User\AppData\Local\Temp\surefire12807395884114520639\surefirebooter-20241202160005955_3.jar C:\Users\Lynx User\AppData\Local\Temp\surefire12807395884114520639 2024-12-02T16-00-05_805-jvmRun1 surefire-20241202160005955_1tmp surefire_0-20241202160005955_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Lynx User\eclipse-workspace\SeleniumProject\target\test-classes;C:\Users\Lynx User\eclipse-workspace\SeleniumProject\target\classes;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-java\4.27.0\selenium-java-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-api\4.27.0\selenium-api-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.27.0\selenium-chrome-driver-4.27.0.jar;C:\Users\Lynx User\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.27.0\selenium-chromium-driver-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-json\4.27.0\selenium-json-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.27.0\selenium-manager-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v129\4.27.0\selenium-devtools-v129-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v130\4.27.0\selenium-devtools-v130-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.27.0\selenium-devtools-v131-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.27.0\selenium-devtools-v85-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.27.0\selenium-edge-driver-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.27.0\selenium-firefox-driver-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-http\4.27.0\selenium-http-4.27.0.jar;C:\Users\Lynx User\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.27.0\selenium-ie-driver-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.27.0\selenium-remote-driver-4.27.0.jar;C:\Users\Lynx User\.m2\repository\com\google\guava\guava\33.3.1-jre\guava-33.3.1-jre.jar;C:\Users\Lynx User\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Lynx User\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Lynx User\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Lynx User\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\Lynx User\.m2\repository\com\google\errorprone\error_prone_annotations\2.28.0\error_prone_annotations-2.28.0.jar;C:\Users\Lynx User\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-api\1.44.1\opentelemetry-api-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-context\1.44.1\opentelemetry-context-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.44.1\opentelemetry-exporter-logging-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.44.1\opentelemetry-sdk-common-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.44.1\opentelemetry-sdk-extension-autoconfigure-spi-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.44.1\opentelemetry-sdk-extension-autoconfigure-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.44.1-alpha\opentelemetry-api-incubator-1.44.1-alpha.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.44.1\opentelemetry-sdk-trace-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.44.1\opentelemetry-sdk-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.44.1\opentelemetry-sdk-metrics-1.44.1.jar;C:\Users\Lynx User\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.44.1\opentelemetry-sdk-logs-1.44.1.jar;C:\Users\Lynx User\.m2\repository\net\bytebuddy\byte-buddy\1.15.10\byte-buddy-1.15.10.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-os\4.27.0\selenium-os-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.27.0\selenium-safari-driver-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\seleniumhq\selenium\selenium-support\4.27.0\selenium-support-4.27.0.jar;C:\Users\Lynx User\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\Lynx User\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Lynx User\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Lynx User\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Lynx User\.m2\repository\com\aventstack\extentreports\5.1.2\extentreports-5.1.2.jar;C:\Users\Lynx User\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Lynx User\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Lynx User\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Lynx User\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\Lynx User\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Lynx User\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Lynx User\AppData\Local\Temp\surefire13664974799348239619\surefirebooter-20241202153942888_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lynx User\AppData\Local\Temp\surefire12807395884114520639\surefirebooter-20241202160005955_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-86"/>
@@ -57,25 +57,25 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="TC1" classname="saucedemo.testCases.TestExecution" time="0.179">
+  <testcase name="TC1" classname="saucedemo.testCases.TestExecution" time="0.184">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="TC2" classname="saucedemo.testCases.TestExecution" time="0.161"/>
-  <testcase name="TC3" classname="saucedemo.testCases.TestExecution" time="0.271"/>
-  <testcase name="TC4[standard_user, secret_sauce](1)" classname="saucedemo.testCases.TestExecution" time="0.21"/>
+  <testcase name="TC2" classname="saucedemo.testCases.TestExecution" time="0.166"/>
+  <testcase name="TC3" classname="saucedemo.testCases.TestExecution" time="0.27"/>
+  <testcase name="TC4[standard_user, secret_sauce](1)" classname="saucedemo.testCases.TestExecution" time="0.211"/>
   <testcase name="TC5" classname="saucedemo.testCases.TestExecution" time="0.008"/>
   <testcase name="TC6" classname="saucedemo.testCases.TestExecution" time="0.019"/>
-  <testcase name="TC7" classname="saucedemo.testCases.TestExecution" time="0.297"/>
-  <testcase name="TC8" classname="saucedemo.testCases.TestExecution" time="0.249"/>
-  <testcase name="TC9" classname="saucedemo.testCases.TestExecution" time="0.063"/>
-  <testcase name="TC10" classname="saucedemo.testCases.TestExecution" time="3.305"/>
-  <testcase name="TC11" classname="saucedemo.testCases.TestExecution" time="0.022"/>
-  <testcase name="TC12" classname="saucedemo.testCases.TestExecution" time="0.463"/>
-  <testcase name="TC13" classname="saucedemo.testCases.TestExecution" time="0.485"/>
-  <testcase name="TC14" classname="saucedemo.testCases.TestExecution" time="0.175"/>
-  <testcase name="TC15" classname="saucedemo.testCases.TestExecution" time="0.254"/>
-  <testcase name="TC16" classname="saucedemo.testCases.TestExecution" time="0.118"/>
+  <testcase name="TC7" classname="saucedemo.testCases.TestExecution" time="0.303"/>
+  <testcase name="TC8" classname="saucedemo.testCases.TestExecution" time="0.276"/>
+  <testcase name="TC9" classname="saucedemo.testCases.TestExecution" time="0.064"/>
+  <testcase name="TC10" classname="saucedemo.testCases.TestExecution" time="3.33"/>
+  <testcase name="TC11" classname="saucedemo.testCases.TestExecution" time="0.027"/>
+  <testcase name="TC12" classname="saucedemo.testCases.TestExecution" time="0.441"/>
+  <testcase name="TC13" classname="saucedemo.testCases.TestExecution" time="0.488"/>
+  <testcase name="TC14" classname="saucedemo.testCases.TestExecution" time="0.173"/>
+  <testcase name="TC15" classname="saucedemo.testCases.TestExecution" time="0.258"/>
+  <testcase name="TC16" classname="saucedemo.testCases.TestExecution" time="0.123"/>
 </testsuite>
