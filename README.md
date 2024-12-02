@@ -26,5 +26,7 @@ https://docs.google.com/spreadsheets/d/1FUSAcneXHMrAfhirHQXsYZekvQnfc3wjYR6raoei
 		The index.html file will be generated with test execution results, including pass/fail status and screenshots for failed tests.
 
 To run the tests, navigate to your project directory and execute the following command:
+
 	```mvn test```
+
 This will trigger Maven to compile the project and run the test cases defined in the project.
