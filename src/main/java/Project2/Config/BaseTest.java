@@ -10,6 +10,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -34,12 +35,18 @@ public class BaseTest {
 		String edgeDriverPath = prop.getProperty("edgeDriverPath");
 		String url = prop.getProperty("url");
 		
-		if (browserName.equals("chrome")) {
+		if (browserName.contains("chrome")) {
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			if (browserName.contains("headless")) {
+				options.addArguments("--headless");
+			}
+			driver = new ChromeDriver(options);
+			
 		} else if (browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
 			driver = new FirefoxDriver();
+			
 		} else if (browserName.equals("edge")) {
 			System.setProperty("webdriver.ie.driver", edgeDriverPath);
 			driver = new EdgeDriver();
