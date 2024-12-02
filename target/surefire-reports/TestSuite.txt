@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: saucedemo.testCases.TestExecution
+Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.623 s -- in saucedemo.testCases.TestExecution
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.025 s -- in TestSuite
