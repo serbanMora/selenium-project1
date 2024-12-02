@@ -3,12 +3,12 @@
 <suite name="Suite">
 
 	<listeners>
-		<listener class-name="Project2.Config.Listeners"/>
+		<listener class-name="saucedemo.config.Listeners"/>
 	</listeners>
 
 	<test thread-count="5" name="Test 1">
 		<classes>
-			<class name="TestCases.TestExecution"/>
+			<class name="saucedemo.testCases.TestExecution"/>
 		</classes>
 	</test> <!--Test -->
 
