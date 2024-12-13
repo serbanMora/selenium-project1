@@ -3,28 +3,28 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TestExecution">
+      <class name="saucedemo.testCases.TestExecution">
         <methods>
-          <include name="TC5"/>
-          <include name="TC3"/>
-          <include name="TC6"/>
-          <include name="TC1"/>
-          <include name="TC4"/>
-          <include name="TC2"/>
-          <include name="setUP"/>
-          <include name="TC9"/>
-          <include name="TC11"/>
-          <include name="TC10"/>
-          <include name="TC7"/>
-          <include name="TC12"/>
-          <include name="TC8"/>
-          <include name="TC15"/>
           <include name="TC14"/>
-          <include name="TC16"/>
-          <include name="tearDown"/>
           <include name="TC13"/>
+          <include name="TC12"/>
+          <include name="TC16"/>
+          <include name="TC15"/>
+          <include name="setUP"/>
+          <include name="TC6"/>
+          <include name="tearDown"/>
+          <include name="TC3"/>
+          <include name="TC2"/>
+          <include name="TC5"/>
+          <include name="TC4"/>
+          <include name="TC11"/>
+          <include name="TC1"/>
+          <include name="TC7"/>
+          <include name="TC10"/>
+          <include name="TC9"/>
+          <include name="TC8"/>
         </methods>
-      </class> <!-- testCases.TestExecution -->
+      </class> <!-- saucedemo.testCases.TestExecution -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
