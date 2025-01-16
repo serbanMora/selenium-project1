@@ -85,7 +85,6 @@ public class ProductCatalog {
 		default:
 			throw new IllegalArgumentException("Invalid sorting order: " + value);
 		}
-		
 		Assert.assertTrue(pricesDouble.equals(copiedPrices), "TC7 FAILED: Products are not sorted in " + value + " order.");
 	}
 	
