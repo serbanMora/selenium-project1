@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-13T13:11:53 EET" name="Default suite" finished-at="2024-12-13T13:12:00 EET" duration-ms="6928">
+  <suite started-at="2025-01-20T12:32:32 EET" name="Default suite" finished-at="2025-01-20T12:32:40 EET" duration-ms="7688">
     <groups>
     </groups>
-    <test started-at="2024-12-13T13:11:53 EET" name="Default test" finished-at="2024-12-13T13:12:00 EET" duration-ms="6928">
+    <test started-at="2025-01-20T12:32:32 EET" name="Default test" finished-at="2025-01-20T12:32:40 EET" duration-ms="7688">
       <class name="saucedemo.testCases.TestExecution">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:53 EET" name="setUP" finished-at="2024-12-13T13:11:54 EET" duration-ms="1343" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:32 EET" name="setUP" finished-at="2025-01-20T12:32:34 EET" duration-ms="1564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC1()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:54 EET" name="TC1" finished-at="2024-12-13T13:11:54 EET" duration-ms="127" status="PASS">
+        <test-method signature="TC1()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:34 EET" name="TC1" finished-at="2025-01-20T12:32:34 EET" duration-ms="137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1 -->
-        <test-method signature="TC2()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:54 EET" name="TC2" finished-at="2024-12-13T13:11:55 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC1" duration-ms="135" status="PASS">
+        <test-method signature="TC2()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:34 EET" name="TC2" finished-at="2025-01-20T12:32:34 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC1" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC2 -->
-        <test-method signature="TC3()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:55 EET" name="TC3" finished-at="2024-12-13T13:11:55 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC2" duration-ms="210" status="PASS">
+        <test-method signature="TC3()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:34 EET" name="TC3" finished-at="2025-01-20T12:32:34 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC2" duration-ms="241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC3 -->
-        <test-method signature="TC4(java.lang.String,java.lang.String)[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:55 EET" name="TC4" data-provider="getData" finished-at="2024-12-13T13:11:55 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC3" duration-ms="168" status="PASS">
+        <test-method signature="TC4(java.lang.String,java.lang.String)[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:34 EET" name="TC4" data-provider="getData" finished-at="2025-01-20T12:32:35 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC3" duration-ms="233" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,55 +39,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC4 -->
-        <test-method signature="TC5()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:55 EET" name="TC5" finished-at="2024-12-13T13:11:55 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC4" duration-ms="8" status="PASS">
+        <test-method signature="TC5()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:35 EET" name="TC5" finished-at="2025-01-20T12:32:35 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC4" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC5 -->
-        <test-method signature="TC6()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:55 EET" name="TC6" finished-at="2024-12-13T13:11:55 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC5" duration-ms="15" status="PASS">
+        <test-method signature="TC6()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:35 EET" name="TC6" finished-at="2025-01-20T12:32:35 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC5" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC6 -->
-        <test-method signature="TC7()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:55 EET" name="TC7" finished-at="2024-12-13T13:11:55 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC6" duration-ms="175" status="PASS">
+        <test-method signature="TC7()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:35 EET" name="TC7" finished-at="2025-01-20T12:32:35 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC6" duration-ms="280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC7 -->
-        <test-method signature="TC8()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:55 EET" name="TC8" finished-at="2024-12-13T13:11:55 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC7" duration-ms="164" status="PASS">
+        <test-method signature="TC8()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:35 EET" name="TC8" finished-at="2025-01-20T12:32:35 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC7" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC8 -->
-        <test-method signature="TC9()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:55 EET" name="TC9" finished-at="2024-12-13T13:11:55 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC8" duration-ms="37" status="PASS">
+        <test-method signature="TC9()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:35 EET" name="TC9" finished-at="2025-01-20T12:32:35 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC8" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC9 -->
-        <test-method signature="TC10()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:55 EET" name="TC10" finished-at="2024-12-13T13:11:59 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC9" duration-ms="3193" status="PASS">
+        <test-method signature="TC10()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:35 EET" name="TC10" finished-at="2025-01-20T12:32:38 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC9" duration-ms="3234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC10 -->
-        <test-method signature="TC11()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:59 EET" name="TC11" finished-at="2024-12-13T13:11:59 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC10" duration-ms="26" status="PASS">
+        <test-method signature="TC11()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:38 EET" name="TC11" finished-at="2025-01-20T12:32:38 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC10" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC11 -->
-        <test-method signature="TC12()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:59 EET" name="TC12" finished-at="2024-12-13T13:11:59 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC11" duration-ms="499" status="PASS">
+        <test-method signature="TC12()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:38 EET" name="TC12" finished-at="2025-01-20T12:32:39 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC11" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC12 -->
-        <test-method signature="TC13()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:59 EET" name="TC13" finished-at="2024-12-13T13:11:59 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC12" duration-ms="339" status="PASS">
+        <test-method signature="TC13()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:39 EET" name="TC13" finished-at="2025-01-20T12:32:39 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC12" duration-ms="415" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC13 -->
-        <test-method signature="TC14()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:11:59 EET" name="TC14" finished-at="2024-12-13T13:12:00 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC13" duration-ms="100" status="PASS">
+        <test-method signature="TC14()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:39 EET" name="TC14" finished-at="2025-01-20T12:32:39 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC13" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC14 -->
-        <test-method signature="TC15()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:12:00 EET" name="TC15" finished-at="2024-12-13T13:12:00 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC14" duration-ms="132" status="PASS">
+        <test-method signature="TC15()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:39 EET" name="TC15" finished-at="2025-01-20T12:32:40 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC14" duration-ms="190" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC15 -->
-        <test-method signature="TC16()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:12:00 EET" name="TC16" finished-at="2024-12-13T13:12:00 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC15" duration-ms="61" status="PASS">
+        <test-method signature="TC16()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:40 EET" name="TC16" finished-at="2025-01-20T12:32:40 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC15" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC16 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2024-12-13T13:12:00 EET" name="tearDown" finished-at="2024-12-13T13:12:00 EET" duration-ms="156" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:saucedemo.testCases.TestExecution@5158b42f]" started-at="2025-01-20T12:32:40 EET" name="tearDown" finished-at="2025-01-20T12:32:40 EET" duration-ms="164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

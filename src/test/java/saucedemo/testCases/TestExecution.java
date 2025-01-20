@@ -1,7 +1,5 @@
 package saucedemo.testCases;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -22,7 +20,7 @@ public class TestExecution extends BaseTest {
 	String password = "secret_sauce";
 	
 	@Test (alwaysRun = true, enabled = true)
-	public void TC1() throws IOException {
+	public void TC1() {
 		login = new LoginPage(driver);
 		login.loginButton().click();
 		explicitWait(login.loginError(), "visibility", 3);

@@ -90,9 +90,4 @@ public class BaseTest {
 		String text = (String) js.executeScript("return arguments[0].value;", element);
 		return text;
 	}
-	
-	public void scrollBy(String value) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, " + value + ");");
-	}
 }
