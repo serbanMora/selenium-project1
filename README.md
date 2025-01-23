@@ -11,9 +11,12 @@ https://docs.google.com/spreadsheets/d/1FUSAcneXHMrAfhirHQXsYZekvQnfc3wjYR6raoei
 
 ## \SeleniumProject\src\main\java\saucedemo\pageObject
 This directory contains the page object classes representing various pages of the application. These classes encapsulate the logic for interacting with page elements (buttons, fields, etc.) and provide methods to perform actions.
-*CartPage.java: Contains methods for interacting with the cart page.
-*LoginPage.java: Contains methods for logging in to the application.
-*ProductCatalog.java: Contains methods for interacting with the product catalog page.
+
+* CartPage.java: Contains methods for interacting with the cart page.
+
+* LoginPage.java: Contains methods for logging in to the application.
+
+* ProductCatalog.java: Contains methods for interacting with the product catalog page.
 
 ## \SeleniumProject\src\main\java\saucedemo\config
 This directory contains configuration files and base test classes needed for setting up the testing environment.
