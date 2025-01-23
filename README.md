@@ -7,7 +7,7 @@ To run the tests, navigate to your project directory and execute the following c
  This will trigger Maven to compile the project and run the test cases defined in the project.
 
 # Test Cases containing scenarios, steps, automation data, ER/AR and statuses can be found here:
-[Test Cases Spreadsheet Document](https://docs.google.com/spreadsheets/d/1FUSAcneXHMrAfhirHQXsYZekvQnfc3wjYR6raoeiOE0/edit?gid=0#gid=0)
+* [Test Cases Spreadsheet Document](https://docs.google.com/spreadsheets/d/1FUSAcneXHMrAfhirHQXsYZekvQnfc3wjYR6raoeiOE0/edit?gid=0#gid=0)
 
 ## \SeleniumProject\src\main\java\saucedemo\pageObject
 This directory contains the page object classes representing various pages of the application. These classes encapsulate the logic for interacting with page elements (buttons, fields, etc.) and provide methods to perform actions.
