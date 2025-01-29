@@ -19,7 +19,7 @@ public class TestExecution extends BaseTest {
 	String userName = "standard_user";
 	String password = "secret_sauce";
 	
-	@Test (alwaysRun = true, enabled = true)
+	@Test
 	public void TC1() {
 		login = new LoginPage(driver);
 		login.loginButton().click();
@@ -27,18 +27,16 @@ public class TestExecution extends BaseTest {
 		Assert.assertEquals(login.loginError().getText(), "Epic sadface: Username is required");
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC1", enabled = true)
+	@Test (dependsOnMethods = "TC1")
 	public void TC2() {
-		login = new LoginPage(driver);
 		login.setName("standard_user");
 		login.loginButton().click();
 		explicitWait(login.loginError(), "visibility", 3);
 		Assert.assertEquals(login.loginError().getText(), "Epic sadface: Password is required");
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC2", enabled = true)
+	@Test (dependsOnMethods = "TC2")
 	public void TC3() {
-		login = new LoginPage(driver);
 		login.setPassword("invalidPass");
 		login.loginButton().click();
 		explicitWait(login.loginError(), "visibility", 3);
@@ -48,64 +46,58 @@ public class TestExecution extends BaseTest {
 		driver.navigate().refresh();
 	}
 	
-	@Test (dataProvider = "getData", alwaysRun = true, dependsOnMethods = "TC3", enabled = true)
+	@Test (dataProvider = "getData", dependsOnMethods = "TC3")
 	public void TC4(String userName, String password) {
-		login = new LoginPage(driver);
 		login.setName(userName);
 		login.setPassword(password);
 		Assert.assertEquals(jsExecutorGetText(login.loginButton()), "Login");
 		login.clickLogIn();
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC4", enabled = true)
+	@Test (dependsOnMethods = "TC4")
 	public void TC5() {
 		Assert.assertEquals(driver.getTitle(), "Swag Labs");
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC5", enabled = true)
+	@Test (dependsOnMethods = "TC5")
 	public void TC6() {
 		Assert.assertEquals(driver.findElements(By.tagName("a")).size(), 20);
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC6", enabled = true)
+	@Test (dependsOnMethods = "TC6")
 	public void TC7() {
 		productCatalog = new ProductCatalog(driver);
 		productCatalog.priceOrderValidation("hilo");
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC7", enabled = true)
+	@Test (dependsOnMethods = "TC7")
 	public void TC8() {
-		productCatalog = new ProductCatalog(driver);
 		productCatalog.nameOrderValidation("za");
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC8", enabled = true)
+	@Test (dependsOnMethods = "TC8")
 	public void TC9() {
-		productCatalog = new ProductCatalog(driver);
 		productCatalog.buttonTextValidation("addToCart");
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC9", enabled = true)
+	@Test (dependsOnMethods = "TC9")
 	public void TC10() {
-		productCatalog = new ProductCatalog(driver);
 		productCatalog.addItems(ProductCatalog.itemNames());
 		productCatalog.buttonTextValidation("remove");
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC10", enabled = true)
+	@Test (dependsOnMethods = "TC10")
 	public void TC11() {
-		productCatalog = new ProductCatalog(driver);
 		productCatalog.cartIconNumberAssertion();
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC11", enabled = true)
+	@Test (dependsOnMethods = "TC11")
 	public void TC12() {
-		productCatalog = new ProductCatalog(driver);
 		productCatalog.closeAllTabsExceptMain();
 		productCatalog.clickCart();
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC12", enabled = true)
+	@Test (dependsOnMethods = "TC12")
 	public void TC13() {
 		cartPage = new CartPage(driver);
 		cartPage.checkout().click();
@@ -121,21 +113,18 @@ public class TestExecution extends BaseTest {
 		cartPage.continueButton().click();
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC13", enabled = true)
+	@Test (dependsOnMethods = "TC13")
 	public void TC14() {
-		cartPage = new CartPage(driver);
 		cartPage.checkoutProductsValidation();
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC14", enabled = true)
+	@Test (dependsOnMethods = "TC14")
 	public void TC15() {
-		cartPage = new CartPage(driver);
 		cartPage.checkoutPriceValidation();
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC15", enabled = true)
+	@Test (dependsOnMethods = "TC15")
 	public void TC16() {
-		cartPage = new CartPage(driver);
 		cartPage.submitOrder();
 		Assert.assertEquals(cartPage.completeHeader().getText(), "Thank you for your order!");
 		Assert.assertEquals(cartPage.completeText().getText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
