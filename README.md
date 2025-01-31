@@ -40,4 +40,3 @@ This directory contains the test case classes responsible for executing the test
 Extent Reports library is used to generate a report document, the ```index.html``` file will be generated with test execution results, including pass/fail status and screenshots for failed tests.
 ![Extent Report Screenshot](assets/extent-1.png)
 ![Extent Report Screenshot](assets/extent-2.png)
-
