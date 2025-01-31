@@ -36,6 +36,5 @@ This directory contains the test case classes responsible for executing the test
 
 ## \SeleniumProject\REPORTS\index.html
 Extent Reports library is used to generate a report document, the ```index.html``` file will be generated with test execution results, including pass/fail status and screenshots for failed tests.
-![ScreenShot](https://www.dropbox.com/preview/github-demo/extent-1.png)
-![ScreenShot](https://www.dropbox.com/preview/github-demo/extent-1.png)
+![Extent Report Screenshot](https://www.dropbox.com/s/abc123xyz/extent-1.png?raw=1)
 
