@@ -6,6 +6,8 @@ To run the tests, navigate to your project directory and execute the following c
 	```mvn test```
  This will trigger Maven to compile the project and run the test cases defined in the project.
 
+[![automation run in chrome](https://img.youtube.com/vi/MfKdWw7zQjM/maxresdefault.jpg)](https://www.youtube.com/watch?v=MfKdWw7zQjM)
+
 # Test Cases containing scenarios, steps, automation data, ER/AR and statuses can be found here:
 * [Test Cases Spreadsheet Document](https://docs.google.com/spreadsheets/d/1FUSAcneXHMrAfhirHQXsYZekvQnfc3wjYR6raoeiOE0/edit?gid=0#gid=0)
 
