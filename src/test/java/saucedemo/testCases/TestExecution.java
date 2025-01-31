@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import saucedemo.config.BaseTest;
 import saucedemo.pageObject.CartPage;
@@ -15,6 +16,8 @@ public class TestExecution extends BaseTest {
 	LoginPage login;
 	ProductCatalog productCatalog;
 	CartPage cartPage;
+	
+	SoftAssert softAssert;
 	
 	String userName = "standard_user";
 	String password = "secret_sauce";
@@ -99,18 +102,20 @@ public class TestExecution extends BaseTest {
 	
 	@Test (dependsOnMethods = "TC12")
 	public void TC13() {
+		softAssert = new SoftAssert();
 		cartPage = new CartPage(driver);
 		cartPage.checkout().click();
 		cartPage.continueButton().click();
-		Assert.assertEquals(cartPage.loginError().getText(), "Error: First Name is required");
+		softAssert.assertEquals(cartPage.loginError().getText(), "Error: First Name is required");
 		cartPage.completeForm("firstName", "test1");
 		cartPage.continueButton().click();
-		Assert.assertEquals(cartPage.loginError().getText(), "Error: Last Name is required");
+		softAssert.assertEquals(cartPage.loginError().getText(), "Error: Last Name is required");
 		cartPage.completeForm("lastName", "test2");
 		cartPage.continueButton().click();
-		Assert.assertEquals(cartPage.loginError().getText(), "Error: Postal Code is required");
+		softAssert.assertEquals(cartPage.loginError().getText(), "Error: Postal Code is required");
 		cartPage.completeForm("zip", "test3");
 		cartPage.continueButton().click();
+		softAssert.assertAll();
 	}
 	
 	@Test (dependsOnMethods = "TC13")
@@ -126,8 +131,9 @@ public class TestExecution extends BaseTest {
 	@Test (dependsOnMethods = "TC15")
 	public void TC16() {
 		cartPage.submitOrder();
-		Assert.assertEquals(cartPage.completeHeader().getText(), "Thank you for your order!");
-		Assert.assertEquals(cartPage.completeText().getText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+		softAssert.assertEquals(cartPage.completeHeader().getText(), "Thank you for your order!");
+		softAssert.assertEquals(cartPage.completeText().getText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+		softAssert.assertAll();
 	}
 	
 	@DataProvider

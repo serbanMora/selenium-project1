@@ -10,10 +10,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class CartPage {
 
 	WebDriver driver;
+	SoftAssert softAssert;
 	
 	public CartPage(WebDriver driver) {
 		this.driver = driver;
@@ -106,6 +108,7 @@ public class CartPage {
 	}
 	
 	public void checkoutPriceValidation() {
+		softAssert = new SoftAssert();
 		List<WebElement> pricesList = priceList;
 		
 		double subtotalD = Double.parseDouble(subtotalLabel.getText().replaceAll("[^\\d.]", ""));
@@ -120,8 +123,9 @@ public class CartPage {
 		    sum += priceValue;
 			}
 		
-		Assert.assertEquals(sum, subtotalD, 0.01, "TC 15 FAILED: Item total is not displaying correct value.");
-		Assert.assertEquals(totalD, subtotalD + taxD, 0.01, "TC 15 FAILED: Total price is not displaying correct value.");
+		softAssert.assertEquals(sum, subtotalD, 0.01, "TC 15 FAILED: Item total is not displaying correct value.");
+		softAssert.assertEquals(totalD, subtotalD + taxD, 0.01, "TC 15 FAILED: Total price is not displaying correct value.");
+		softAssert.assertAll();
 	}
 	
 	public void submitOrder() {
