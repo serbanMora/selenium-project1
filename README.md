@@ -34,5 +34,8 @@ This directory contains the test case classes responsible for executing the test
 
 * ```TestExecution.java```: The main class that contains the execution logic for running the tests. It integrates the page objects and performs actions in sequence to test the application.
 
-## \SeleniumProject\REPORTS
-The ```index.html``` file will be generated with test execution results, including pass/fail status and screenshots for failed tests.
+## \SeleniumProject\REPORTS\index.html
+Extent Reports library is used to generate a report document, the ```index.html``` file will be generated with test execution results, including pass/fail status and screenshots for failed tests.
+![ScreenShot](https://previews.dropbox.com/p/thumb/ACg12fI53I6JPvr-x7MmjHsTd4oxnKeiE4Azi_S31Rq8i3g9UFQFTArsROjgp09pmfvOw_cctuFo6uTcz_qQgJsHx3pNAk2JB2h38SCa4nXtCEcqo8igoCaus5lhO7elxs_nBUuoST1WabxRo5ZXTfC6q-ia8Maz22wYBo6DgXoGwB8FlwYukYCkFMHq10TRmBtz7mKXk11aAcWLwF1hQ4CXoDyGL_Czuvzrxf7N0AktPiXwnPPFhlPTyg0tZC3dJtAorX6F7Kl4BoCLXRhy8AmfHeVCb47OXxPY7DgQya4c4PhcNekrhjM2OM_pDZFAbKaUJF-CKl0OPL1mI4WGra_j/p.png?is_prewarmed=true)
+![ScreenShot](https://previews.dropbox.com/p/thumb/AChaVBcQHFDt76qugBGUCbdN4apaVVZhnmbtkO8cEr2DQlgiEo2HlXOcifIOvEDNOqagdKCab8xSe7YgPcgNATL586qmVxWTXRkKJA76vrRp-uNHZLlz2ZF2fMmGMUHMomOte1MsTgBfZ_CtKYtCKSr6JNazlEqtL2hRsIfjqJvi10IEjnazPCIyLhNKK8A9OuIexv-1lbslTAM51nLurdLc7gnzkDL9_Cb5OTKZiQncKE2tfzuZrc-l6FE2cwGh8VPcVyobXEQNq8ci6q4wvaxtywDrgGBNXFIOIxYwpRNjabtV0ZCV2hxtRCUsv89e9_7JCLDhwUCnYbRHSBT3Gtfa/p.png?is_prewarmed=true)
+

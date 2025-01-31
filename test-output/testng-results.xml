@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="16" passed="14" failed="1" skipped="1">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-31T12:30:22 EET" name="Default suite" finished-at="2025-01-31T12:30:30 EET" duration-ms="7629">
+  <suite started-at="2025-01-31T14:14:26 EET" name="Suite" finished-at="2025-01-31T14:14:35 EET" duration-ms="9220">
     <groups>
     </groups>
-    <test started-at="2025-01-31T12:30:22 EET" name="Default test" finished-at="2025-01-31T12:30:30 EET" duration-ms="7629">
+    <test started-at="2025-01-31T14:14:26 EET" name="Test 1" finished-at="2025-01-31T14:14:35 EET" duration-ms="9220">
       <class name="saucedemo.testCases.TestExecution">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:22 EET" name="setUP" finished-at="2025-01-31T12:30:24 EET" duration-ms="1493" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:26 EET" name="setUP" finished-at="2025-01-31T14:14:28 EET" duration-ms="2306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC1()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:24 EET" name="TC1" finished-at="2025-01-31T12:30:24 EET" duration-ms="147" status="PASS">
+        <test-method signature="TC1()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:28 EET" name="TC1" finished-at="2025-01-31T14:14:29 EET" duration-ms="594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1 -->
-        <test-method signature="TC2()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:24 EET" name="TC2" finished-at="2025-01-31T12:30:24 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC1" duration-ms="174" status="PASS">
+        <test-method signature="TC2()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:29 EET" name="TC2" finished-at="2025-01-31T14:14:29 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC1" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC2 -->
-        <test-method signature="TC3()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:24 EET" name="TC3" finished-at="2025-01-31T12:30:24 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC2" duration-ms="270" status="PASS">
+        <test-method signature="TC3()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:29 EET" name="TC3" finished-at="2025-01-31T14:14:29 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC2" duration-ms="222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC3 -->
-        <test-method signature="TC4(java.lang.String,java.lang.String)[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:24 EET" name="TC4" data-provider="getData" finished-at="2025-01-31T12:30:24 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC3" duration-ms="213" status="PASS">
+        <test-method signature="TC4(java.lang.String,java.lang.String)[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:29 EET" name="TC4" data-provider="getData" finished-at="2025-01-31T14:14:29 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC3" duration-ms="197" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,130 +39,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC4 -->
-        <test-method signature="TC5()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:24 EET" name="TC5" finished-at="2025-01-31T12:30:24 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC4" duration-ms="9" status="PASS">
+        <test-method signature="TC5()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:29 EET" name="TC5" finished-at="2025-01-31T14:14:29 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC4" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC5 -->
-        <test-method signature="TC6()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:24 EET" name="TC6" finished-at="2025-01-31T12:30:24 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC5" duration-ms="15" status="PASS">
+        <test-method signature="TC6()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:29 EET" name="TC6" finished-at="2025-01-31T14:14:29 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC5" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC6 -->
-        <test-method signature="TC7()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:24 EET" name="TC7" finished-at="2025-01-31T12:30:25 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC6" duration-ms="260" status="PASS">
+        <test-method signature="TC7()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:29 EET" name="TC7" finished-at="2025-01-31T14:14:30 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC6" duration-ms="230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC7 -->
-        <test-method signature="TC8()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:25 EET" name="TC8" finished-at="2025-01-31T12:30:25 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC7" duration-ms="192" status="PASS">
+        <test-method signature="TC8()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:30 EET" name="TC8" finished-at="2025-01-31T14:14:30 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC7" duration-ms="200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC8 -->
-        <test-method signature="TC9()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:25 EET" name="TC9" finished-at="2025-01-31T12:30:25 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC8" duration-ms="45" status="PASS">
+        <test-method signature="TC9()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:30 EET" name="TC9" finished-at="2025-01-31T14:14:30 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC8" duration-ms="45" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC9 -->
-        <test-method signature="TC10()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:25 EET" name="TC10" finished-at="2025-01-31T12:30:28 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC9" duration-ms="3275" status="PASS">
+        <test-method signature="TC10()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:30 EET" name="TC10" finished-at="2025-01-31T14:14:33 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC9" duration-ms="3325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC10 -->
-        <test-method signature="TC11()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:28 EET" name="TC11" finished-at="2025-01-31T12:30:28 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC10" duration-ms="25" status="PASS">
+        <test-method signature="TC11()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:33 EET" name="TC11" finished-at="2025-01-31T14:14:33 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC10" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC11 -->
-        <test-method signature="TC12()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:28 EET" name="TC12" finished-at="2025-01-31T12:30:29 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC11" duration-ms="545" status="PASS">
+        <test-method signature="TC12()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:33 EET" name="TC12" finished-at="2025-01-31T14:14:34 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC11" duration-ms="482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC12 -->
-        <test-method signature="TC13()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:29 EET" name="TC13" finished-at="2025-01-31T12:30:29 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC12" duration-ms="440" status="PASS">
+        <test-method signature="TC13()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:34 EET" name="TC13" finished-at="2025-01-31T14:14:34 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC12" duration-ms="528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC13 -->
-        <test-method signature="TC14()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:29 EET" name="TC14" finished-at="2025-01-31T12:30:29 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC13" duration-ms="135" status="PASS">
+        <test-method signature="TC14()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:34 EET" name="TC14" finished-at="2025-01-31T14:14:34 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC13" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC14 -->
-        <test-method signature="TC15()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:29 EET" name="TC15" finished-at="2025-01-31T12:30:30 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC14" duration-ms="193" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-TC 15 FAILED: Item total is not displaying correct value. expected [129.94] but found [132.94]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-TC 15 FAILED: Item total is not displaying correct value. expected [129.94] but found [132.94]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at saucedemo.pageObject.CartPage.checkoutPriceValidation(CartPage.java:128)
-at saucedemo.testCases.TestExecution.TC15(TestExecution.java:128)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="TC15()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:34 EET" name="TC15" finished-at="2025-01-31T14:14:35 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC14" duration-ms="294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC15 -->
-        <test-method signature="TC16()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:30 EET" name="TC16" finished-at="2025-01-31T12:30:30 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC15" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method TestExecution.TC16()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestExecution.TC16()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="TC16()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:35 EET" name="TC16" finished-at="2025-01-31T14:14:35 EET" depends-on-methods="saucedemo.testCases.TestExecution.TC15" duration-ms="156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC16 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:saucedemo.testCases.TestExecution@222545dc]" started-at="2025-01-31T12:30:30 EET" name="tearDown" finished-at="2025-01-31T12:30:30 EET" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:saucedemo.testCases.TestExecution@eadd4fb]" started-at="2025-01-31T14:14:35 EET" name="tearDown" finished-at="2025-01-31T14:14:35 EET" duration-ms="167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- saucedemo.testCases.TestExecution -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test 1 -->
+  </suite> <!-- Suite -->
 </testng-results>
