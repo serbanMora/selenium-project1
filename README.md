@@ -1,5 +1,7 @@
 # Selenium Project Overview
 
+[![Watch the Video](https://via.placeholder.com/150)](https://www.dropbox.com/scl/fi/6d75gexdlqteqrdn6og08/1.MP4?rlkey=autsdlhwommhieyyq5lny85yy&st=xaadcudr&dl=0)
+
 This personal project is focused on automating test cases for saucedemo.com website, a demo e-commerce website using Selenium WebDriver with the Page Object Model (POM) design pattern. It includes various page objects for interacting with different sections of the application, a configuration class for setting up the WebDriver, and test cases for executing the automated tests.
 
 To run the tests, navigate to your project directory and execute the following command:
