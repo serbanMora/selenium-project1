@@ -1,8 +1,8 @@
 # Selenium Project Overview
 
-This personal project is focused on automating test cases for saucedemo.com website, a demo e-commerce website using Selenium WebDriver with the Page Object Model (POM) design pattern. It includes various page objects for interacting with different sections of the application, a configuration class for setting up the WebDriver, and test cases for executing the automated tests.
+This personal project is focused on automating test cases for saucedemo.com website, a demo e-commerce website using Selenium WebDriver with the Page Object Model (POM) design pattern. It includes various page objects for interacting with different sections of the application, a configuration class for setting up the WebDriver and test cases for executing the automated tests.
 
-To run the tests, navigate to your project directory and execute the following command:
+To run the tests, navigate to project directory and execute the following command:
 	```mvn test```, this will trigger Maven to compile the project and run the test cases defined in the project.
 
 * Test Cases execution demo in Chrome:
