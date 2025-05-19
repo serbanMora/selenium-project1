@@ -76,7 +76,7 @@ public class ProductCatalog {
 		}
 		
 		switch (value.toLowerCase()) {
-		case "lohi": 
+		case "lohi":
 			Collections.sort(copiedPrices);
 			break;
 		case "hilo":
