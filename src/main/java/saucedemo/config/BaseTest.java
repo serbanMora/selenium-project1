@@ -12,7 +12,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -24,17 +26,15 @@ public class BaseTest {
 	
 	@BeforeClass
 	public void setUP() throws IOException {
-		
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/saucedemo/config/data.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
-		
-		String chromeDriverPath = prop.getProperty("chromeDriverPath");
-		String firefoxDriverPath = prop.getProperty("firefoxDriverPath");
-		String edgeDriverPath = prop.getProperty("edgeDriverPath");
+		String chromeDriverPath = System.getProperty("user.dir") + "/drivers/chromedriver.exe";
+		String firefoxDriverPath = System.getProperty("user.dir") + "/drivers/geckodriver.exe";
+		String edgeDriverPath = System.getProperty("user.dir") + "/drivers/msedgedriver.exe";
 		String url = prop.getProperty("url");
-		
+
 		if (browserName.contains("chrome")) {
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			ChromeOptions options = new ChromeOptions();
@@ -42,14 +42,22 @@ public class BaseTest {
 				options.addArguments("--headless");
 			}
 			driver = new ChromeDriver(options);
-			
-		} else if (browserName.equals("firefox")) {
+
+		} else if (browserName.contains("firefox")) {
 			System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
-			driver = new FirefoxDriver();
-			
-		} else if (browserName.equals("edge")) {
+			FirefoxOptions options = new FirefoxOptions();
+			if (browserName.contains("headless")) {
+				options.addArguments("--headless");
+			}
+			driver = new FirefoxDriver(options);
+
+		} else if (browserName.contains("edge")) {
 			System.setProperty("webdriver.ie.driver", edgeDriverPath);
-			driver = new EdgeDriver();
+			EdgeOptions options = new EdgeOptions();
+			if (browserName.contains("headless")) {
+				options.addArguments("--headless");
+			}
+			driver = new EdgeDriver(options);
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

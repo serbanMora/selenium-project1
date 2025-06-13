@@ -29,7 +29,7 @@ This directory contains configuration files and base test classes needed for set
 
 * ```Listeners.java```: Implements TestNG listeners to track test events and log results into the Extent Report.
 	
-* ```data.properties```: A properties file where you can select the browser in which the test cases will run (chrome, firefox or edge), the url and the browser driver paths. The chrome browser test execution can also be set to run headless, to run Chrome in headless mode, append ```headless``` to ```chrome```.
+* ```data.properties```: A properties file where you can select the browser in which the test cases will run (chrome, firefox or edge) and the URL. Test execution can also be set to run headless, to run in headless mode, append ```headless``` to chrome, firefox or edge.
 
 ## \selenium-project1\src\test\java\saucedemo\testCases
 This directory contains the test case classes responsible for executing the test logic. Each class corresponds to specific scenarios and uses the page objects to carry out the tests.
