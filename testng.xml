@@ -3,13 +3,12 @@
 <suite name="Suite">
 
 	<listeners>
-		<listener class-name="saucedemo.config.Listeners"/>
+		<listener class-name="saucedemo.config.Listeners" />
 	</listeners>
 
 	<test thread-count="5" name="Test 1">
 		<classes>
-			<class name="saucedemo.testCases.TestExecution"/>
+			<class name="saucedemo.testCases.TestExecution" />
 		</classes>
-	</test> <!--Test -->
-
-</suite> <!--Suite -->
+	</test>
+</suite> 
