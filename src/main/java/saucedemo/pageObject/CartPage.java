@@ -104,7 +104,7 @@ public class CartPage {
 		Collections.sort(products);
 		Collections.sort(expectedProducts);
 		
-		Assert.assertTrue(products.equals(expectedProducts), "TC14 FAILED: " + expectedProducts + " not displayed at checkout.");
+		Assert.assertTrue(products.equals(expectedProducts));
 	}
 	
 	public void checkoutPriceValidation() {
@@ -123,8 +123,8 @@ public class CartPage {
 		    sum += priceValue;
 			}
 		
-		softAssert.assertEquals(sum, subtotalD, 0.01, "TC 15 FAILED: Item total is not displaying correct value.");
-		softAssert.assertEquals(totalD, subtotalD + taxD, 0.01, "TC 15 FAILED: Total price is not displaying correct value.");
+		softAssert.assertEquals(sum, subtotalD, 0.01);
+		softAssert.assertEquals(totalD, subtotalD + taxD, 0.01);
 		softAssert.assertAll();
 	}
 	

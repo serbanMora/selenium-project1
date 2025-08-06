@@ -19,8 +19,8 @@ public class TestExecution extends BaseTest {
 	
 	SoftAssert softAssert;
 	
-	String userName = "standard_user";
-	String password = "secret_sauce";
+	private static final String USER_NAME = "standard_user";
+	private static final String PASSWORD = "secret_sauce";
 	
 	@Test
 	public void TC1() {
@@ -140,8 +140,8 @@ public class TestExecution extends BaseTest {
 	public Object[][] getData() {
 		Object[][] data = new Object[1][2];
 		
-		data[0][0] = userName;
-		data[0][1] = password;
+		data[0][0] = USER_NAME;
+		data[0][1] = PASSWORD;
 		
 		return data;
 	}

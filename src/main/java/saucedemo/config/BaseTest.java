@@ -6,7 +6,6 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,6 +39,8 @@ public class BaseTest {
 			ChromeOptions options = new ChromeOptions();
 			if (browserName.contains("headless")) {
 				options.addArguments("--headless");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--no-sandbox");
 			}
 			driver = new ChromeDriver(options);
 
@@ -48,6 +49,8 @@ public class BaseTest {
 			FirefoxOptions options = new FirefoxOptions();
 			if (browserName.contains("headless")) {
 				options.addArguments("--headless");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--no-sandbox");
 			}
 			driver = new FirefoxDriver(options);
 
@@ -56,12 +59,14 @@ public class BaseTest {
 			EdgeOptions options = new EdgeOptions();
 			if (browserName.contains("headless")) {
 				options.addArguments("--headless");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--no-sandbox");
 			}
 			driver = new EdgeDriver(options);
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
 		driver.get(url);
 	}
 	
@@ -73,23 +78,19 @@ public class BaseTest {
 	}
 	
 	public void explicitWait(WebElement element, String conditionType, int duration) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
-			switch (conditionType) {
-			case "visibility":
-				wait.until(ExpectedConditions.visibilityOf(element));
-				break;
-			case "invisibility":
-				wait.until(ExpectedConditions.invisibilityOf(element));
-				break;
-			case "clickable":
-				wait.until(ExpectedConditions.elementToBeClickable(element));
-				break;
-			default:
-				throw new IllegalArgumentException("Unsupported condition type: " + conditionType);
-			}
-		} catch (TimeoutException e) {
-			System.err.println("Element not visible after " + duration + " seconds: " + element);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		switch (conditionType) {
+		case "visibility":
+			wait.until(ExpectedConditions.visibilityOf(element));
+			break;
+		case "invisibility":
+			wait.until(ExpectedConditions.invisibilityOf(element));
+			break;
+		case "clickable":
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			break;
+		default:
+			throw new IllegalArgumentException("Unsupported condition type: " + conditionType);
 		}
 	}
 	

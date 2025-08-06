@@ -82,10 +82,8 @@ public class ProductCatalog {
 		case "hilo":
 			Collections.sort(copiedPrices, Collections.reverseOrder());
 			break;
-		default:
-			throw new IllegalArgumentException("Invalid sorting order: " + value);
 		}
-		Assert.assertTrue(pricesDouble.equals(copiedPrices), "TC7 FAILED: Products are not sorted in " + value + " order.");
+		Assert.assertTrue(pricesDouble.equals(copiedPrices));
 	}
 	
 	public void nameOrderValidation(String value) {
@@ -110,10 +108,8 @@ public class ProductCatalog {
 		case "za":
 			Collections.sort(copiedTexts, Collections.reverseOrder());
 			break;
-		default:
-			throw new IllegalArgumentException("Invalid sorting order: " + value);
 		}
-		Assert.assertTrue(titleTexts.equals(copiedTexts), "TC8 FAILED: Products are not sorted in " + value + " order.");
+		Assert.assertTrue(titleTexts.equals(copiedTexts));
 	}
 	
 	public void buttonTextValidation(String type) {
@@ -139,7 +135,7 @@ public class ProductCatalog {
 				}
 			}
 		}
-		Assert.assertTrue(btn.containsAll(expected), "TC10 FAILED: '" + type + "' button is not displaying.");
+		Assert.assertTrue(btn.containsAll(expected));
 	}
 	
 	public void addItems(String[] itemNames) {
@@ -166,7 +162,7 @@ public class ProductCatalog {
 	public void cartIconNumberAssertion() {
 		String cartText = cartIcon().getText();
 		int cartNumber = Integer.parseInt(cartText);
-		Assert.assertEquals(cartNumber, itemNames().length, "TC11 FAILED: Cart does not display the correct number.");
+		Assert.assertEquals(cartNumber, itemNames().length);
 	}
 	
 	public void closeAllTabsExceptMain() {
